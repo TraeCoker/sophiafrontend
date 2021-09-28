@@ -7,6 +7,5 @@ class School {
         this.description = description 
         this.philosophers = philosophers
         School.all.push(this)
-        debugger
     }
 }
