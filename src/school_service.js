@@ -8,7 +8,7 @@ class SchoolService {
         .then(response => response.json())
         .then(json => {
             json.forEach(element=>{
-                debugger})
+                const s = new School(element)})
         })
     }
 }
