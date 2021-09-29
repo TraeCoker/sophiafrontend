@@ -39,14 +39,21 @@ class School {
     }
 
     static attachToDom(){
+        mainDiv.innerText = ""
         this.all.forEach(school => mainDiv.appendChild(school.renderCard()));
     }
 
     renderShowView(e){
-        mainDiv.innerHTML = ""
+        mainDiv.innerText = ""
         const clickedDiv = this
         const school = School.all.find(function(s){return s.id === parseInt(clickedDiv.id.split('-')[2])})
-        
+        const backBtn = document.createElement('button')
+        backBtn.innerHTML = "Back"
+        backBtn.addEventListener('click', function(){
+            School.attachToDom();
+        });
+
+        mainDiv.appendChild(backBtn)
         mainDiv.appendChild(school.element)
     }
 }
