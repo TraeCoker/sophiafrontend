@@ -13,6 +13,13 @@ class School {
         School.all.push(this)
     }
 
+    render(){
+        this.element.innerHTML = `
+        <h1 class="school-name-show">${this.name}</h1></h1>
+        <p class="description">${this.description}</p>
+        `
+    }
+
     renderCard(){
         const card = document.createElement('div')
         card.id = `school-card-${this.id}`

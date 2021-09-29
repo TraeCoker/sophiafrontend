@@ -9,7 +9,7 @@ class SchoolService {
         .then(json => {
             json.forEach(element=>{
                 const s = new School(element)
-                //s.render();
+                s.render();
             })
         })
     }
