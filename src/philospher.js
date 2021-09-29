@@ -33,4 +33,8 @@ class Philosopher {
 
         this.element.appendChild(worksList)
     }
+
+    static renderShowView(e){
+        console.log(e.target);
+    }
 }

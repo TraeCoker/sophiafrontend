@@ -56,9 +56,13 @@ class School {
 
         const philoBtns = school.philosophers.map(function(p){
             const btn = document.createElement("button");
+            btn.dataset['id'] = p.id
             btn.id = `philo-btn-${p.id}`
             btn.innerHTML = p.name 
 
+            btn.addEventListener('click', function(e){
+                Philosopher.renderShowView(e);
+            })
             return btn
         })
 
@@ -66,5 +70,5 @@ class School {
         mainDiv.appendChild(school.element)
         philoBtns.forEach(button => mainDiv.appendChild(button))
     }
-    
+
 }
