@@ -28,7 +28,7 @@ class Philosopher {
         this.works.forEach(w =>{
             const li = document.createElement('li');
             li.innerHTML = `<a href=${w.link}>${w.name}</a>` 
-            philosopherList.appendChild(li);
+            worksList.appendChild(li);
         });
 
         this.element.appendChild(worksList)
