@@ -48,12 +48,22 @@ class School {
         const clickedDiv = this
         const school = School.all.find(function(s){return s.id === parseInt(clickedDiv.id.split('-')[2])})
         const backBtn = document.createElement('button')
+        
         backBtn.innerHTML = "Back"
         backBtn.addEventListener('click', function(){
             School.attachToDom();
         });
 
+        const philoBtns = school.philosophers.map(function(p){
+            const btn = document.createElement("button");
+            btn.id = `philo-btn-${p.id}`
+            btn.innerHTML = p.name 
+
+            return btn
+        })
+
         mainDiv.appendChild(backBtn)
         mainDiv.appendChild(school.element)
+        philoBtns.forEach(button => mainDiv.appendChild(button))
     }
 }
