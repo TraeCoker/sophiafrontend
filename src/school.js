@@ -9,10 +9,14 @@ class School {
         this.element = document.createElement('div');
         this.element.dataset['id'] = id;
         this.element.id = `school-${this.id}`
+        //this.element.addEventListener('click', this.renderShowView)
         School.all.push(this)
     }
 
-    render(){
+    renderCard(){
+        const card = document.createElement('div')
+        card.id = `school-card-${this.id}`
+
         const philosopherList = document.createElement('ul')
 
         this.philosophers.forEach(p =>{
@@ -21,9 +25,21 @@ class School {
             philosopherList.appendChild(li);
         });
 
-        this.element.innerHTML = `<h2 class="school-name">${this.name}</h2>`
-        this.element.appendChild(philosopherList);
+        card.innerHTML = `<h2 class="school-name">${this.name}</h2>`
+        card.appendChild(philosopherList);
+        card.addEventListener('click', this.renderShowView)
+        return card
+    }
 
-        return this.element
+    static attachToDom(){
+        this.all.forEach(school => mainDiv.appendChild(school.renderCard()));
+    }
+
+    renderShowView(e){
+        mainDiv.innerHTML = ""
+        const clickedDiv = this
+        const school = School.all.find(function(s){return s.id === parseInt(clickedDiv.id.split('-')[2])})
+        
+        mainDiv.appendChild(school.element)
     }
 }
