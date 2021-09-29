@@ -48,7 +48,7 @@ class School {
         const clickedDiv = this
         const school = School.all.find(function(s){return s.id === parseInt(clickedDiv.id.split('-')[2])})
         const backBtn = document.createElement('button')
-        
+
         backBtn.innerHTML = "Back"
         backBtn.addEventListener('click', function(){
             School.attachToDom();
@@ -66,4 +66,5 @@ class School {
         mainDiv.appendChild(school.element)
         philoBtns.forEach(button => mainDiv.appendChild(button))
     }
+    
 }

@@ -8,7 +8,9 @@ class PhilosopherService {
         .then(response => response.json())
         .then(json => {
             json.forEach(element=>{
-                const p = new Philosopher(element)})
+                const p = new Philosopher(element);
+                p.render();
+            })
         })
     }
 }
