@@ -11,4 +11,19 @@ class School {
         this.element.id = `school-${this.id}`
         School.all.push(this)
     }
+
+    render(){
+        const philosopherList = document.createElement('ul')
+
+        this.philosophers.forEach(p =>{
+            const li = document.createElement('li');
+            li.innerHTML = p.name; 
+            philosopherList.appendChild(li);
+        });
+
+        this.element.innerHTML = `<h2 class="school-name">${this.name}</h2>`
+        this.element.appendChild(philosopherList);
+
+        return this.element
+    }
 }
