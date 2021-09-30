@@ -33,6 +33,7 @@ class Philosopher {
 
         this.element.appendChild(worksList)
     }
+    
 
     static renderShowView(e){
         mainDiv.innerText = ""

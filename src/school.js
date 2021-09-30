@@ -44,6 +44,7 @@ class School {
     }
 
     renderShowView(e){
+        debugger 
         mainDiv.innerText = ""
         const clickedDiv = this
         const school = School.all.find(function(s){return s.id === parseInt(clickedDiv.id.split('-')[2])})
