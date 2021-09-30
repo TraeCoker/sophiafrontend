@@ -5,7 +5,11 @@ class Modal {
     }
 
     get modal(){
-       return document.querySelector("#myModal")
+       return document.querySelector("#myModal");
+    }
+
+    get main(){
+        return document.getElementById("modal-main");
     }
 
     open = () => {
