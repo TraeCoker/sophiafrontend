@@ -78,3 +78,11 @@ body {
     height: 250px;
     border-radius: 5px 5px 0 0;
   }
+
+  .philosopher-avatar {
+    height: 250px;
+    width: auto;
+    float: left;
+    padding: 3px 16px;
+    border-radius: 5px 5px 0 0;
+  }
