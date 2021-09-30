@@ -27,7 +27,7 @@ class Philosopher {
 
         this.works.forEach(w =>{
             const li = document.createElement('li');
-            li.innerHTML = `<a href=${w.link}>${w.name}</a>` 
+            li.innerHTML = `<a href=${w.link} target="_blank">${w.name}</a>` 
             worksList.appendChild(li);
         });
 
