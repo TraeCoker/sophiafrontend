@@ -13,5 +13,5 @@ homeDiv.addEventListener('click', function(e){
         homeDiv.innerHTML = ""
         School.attachToDom();
     } else if (e.target.id === "pthn_btn"){
-        modal.open();
+        Pantheon.renderPantheonForm();
     }})
