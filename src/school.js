@@ -22,6 +22,7 @@ class School {
 
     renderCard(){
         const card = document.createElement('div')
+        card.className = "card"
         card.id = `school-card-${this.id}`
 
         const philosopherList = document.createElement('ul')
@@ -32,8 +33,11 @@ class School {
             philosopherList.appendChild(li);
         });
 
-        card.innerHTML = `<h2 class="school-name">${this.name}</h2>`
-        card.appendChild(philosopherList);
+        const info = document.createElement('div')
+        info.className = "container"
+        info.innerHTML = `<h2 class="school-name"><b>${this.name}</b></h2>`
+        info.appendChild(philosopherList);
+        card.appendChild(info)
         card.addEventListener('click', this.renderShowView)
         return card
     }
