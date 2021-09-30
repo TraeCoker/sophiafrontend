@@ -1,7 +1,7 @@
 class Philosopher {
     static all = [];
 
-    constructor({name, id, bio, lifespan, quotes, works, school, pantheon}){
+    constructor({name, id, bio, lifespan, quotes, works, school, pantheons}){
         this.name = name 
         this.id = id 
         this.bio = bio 
@@ -9,7 +9,7 @@ class Philosopher {
         this.quotes = quotes 
         this.works = works 
         this.school_id = school["id"]
-        this.pantheon = pantheon 
+        this.pantheons = pantheons
         this.element = document.createElement('div');
         this.element.dataset['id'] = id;
         this.element.id = `philosopher-${this.id}`
