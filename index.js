@@ -12,5 +12,6 @@ homeDiv.addEventListener('click', function(e){
     if(e.target.id === "schl_btn"){
         homeDiv.innerHTML = ""
         School.attachToDom();
-    }
-})
+    } else if (e.target.id === "pthn_btn"){
+        modal.open();
+    }})
