@@ -3,6 +3,7 @@ const philosopherServiceCall = new PhilosopherService(port);
 const schoolServiceCall = new SchoolService(port);
 const homeDiv = document.getElementById("home");
 const mainDiv = document.getElementById("main");
+const modal = new Modal();
 
 philosopherServiceCall.getPhilosophers();
 schoolServiceCall.getSchools();
