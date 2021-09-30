@@ -36,16 +36,10 @@ class Philosopher {
     
 
     static renderShowView(e){
-        mainDiv.innerText = ""
+        modal.main.innerText = ""
         const philosopher = this.all.find(function(p){return p.id === parseInt(e.target.dataset.id)})
-        const backBtn = document.createElement('button')
-
-        backBtn.innerHTML = "Back"
-        backBtn.addEventListener('click', function(){
-            School.attachToDom();
-        });
-
-        mainDiv.appendChild(backBtn)
-        mainDiv.appendChild(philosopher.element)
+        
+        modal.main.appendChild(philosopher.element)
+        modal.open();
     }
 }
