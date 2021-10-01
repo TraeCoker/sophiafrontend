@@ -45,7 +45,4 @@ class Philosopher {
         modal.open();
     }
 
-    static renderFormButtons(){
-        const formButtons = this.all.map(p => `<label><input type="checkbox" name="philo-box" value="${p.id}"><span>${p.name}</span></label>`)
-    }
 }
