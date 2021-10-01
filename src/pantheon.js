@@ -12,6 +12,11 @@ class Pantheon {
         Philosopher.all.forEach((p) => {
             const label = document.createElement("label")
             label.innerHTML = `<input type="checkbox" name="${p.name} value="${p.name}"><span>${p.name}</span>`
+            const span = label.firstElementChild.nextElementSibling
+            const img = document.createElement("img")
+            img.src = p.imageUrl
+            img.className = "thumbnail"
+            span.appendChild(img)
             grid.appendChild(label)
         })
         const submit = document.createElement("input");
