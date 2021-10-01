@@ -98,10 +98,11 @@ body {
     padding: 10px;
     text-transform: uppercase;
     border: 2px solid white;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     color: white;
     background-color: rgb(107, 201, 255);
     align: center;
+    border-radius: 5px 5px 0 0;
   }
   
   #checkbox-grid input[type="checkbox"]:checked + span {
