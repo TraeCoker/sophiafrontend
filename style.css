@@ -88,4 +88,23 @@ body {
     border-radius: 5px 5px 0 0;
   }
 
+  /* checkbox grid */
+  #checkbox-grid input[type="checkbox"] {
+    display: none;
+  }
   
+  #checkbox-grid span {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(107, 201, 255);
+  }
+  
+  #checkbox-grid input[type="checkbox"]:checked + span {
+    background-color: gold;
+    color: rgb(107, 201, 255);
+  }
+
