@@ -103,6 +103,7 @@ body {
     background-color: rgb(107, 201, 255);
     align: center;
     border-radius: 5px 5px 0 0;
+    cursor: pointer;
   }
   
   #checkbox-grid input[type="checkbox"]:checked + span {
