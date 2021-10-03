@@ -22,4 +22,14 @@ class PantheonService {
             modal.close();
         })
     }
+    
+    getSchools(){
+        fetch(this.port + "/pantheons")
+        .then(response => response.json())
+        .then(json => {
+            json.forEach(element=>{
+                const p = new Pantheon(element)
+            })
+        })
+    }
 }

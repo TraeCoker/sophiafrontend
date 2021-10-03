@@ -9,6 +9,7 @@ const modal = new Modal();
 philosopherServiceCall.getPhilosophers();
 schoolServiceCall.getSchools();
 
+
 homeDiv.addEventListener('click', function(e){
     if(e.target.id === "schl_btn"){
         homeDiv.innerHTML = ""
