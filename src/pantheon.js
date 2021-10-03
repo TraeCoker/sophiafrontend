@@ -55,7 +55,11 @@ class Pantheon {
         return card
     }
 
-    
+    static attachToDom(){
+        mainDiv.innerText = ""
+        this.all.forEach(pantheon => mainDiv.appendChild(pantheon.renderCard()));
+    }
+
 
     static renderPantheonForm(){
         modal.main.innerHTML = `
