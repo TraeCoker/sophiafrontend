@@ -28,8 +28,9 @@ class Pantheon {
         submit.type = "submit" 
         submit.value = "Create Pantheon"
         submit.onclick = Pantheon.selectiveSubmit;
-
         form.appendChild(submit)
+
+        modal.main.querySelector("form").addEventListener('submit', this.handleSubmit)
         modal.open();
     }
 
@@ -49,5 +50,9 @@ class Pantheon {
         if (checked.length < min){
             return false
         }
+    }
+
+    static handleSubmit(e){
+        debugger 
     }
 }
