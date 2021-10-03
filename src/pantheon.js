@@ -27,17 +27,27 @@ class Pantheon {
         const submit = document.createElement("input");
         submit.type = "submit" 
         submit.value = "Create Pantheon"
+        submit.onclick = Pantheon.selectiveSubmit;
 
         form.appendChild(submit)
         modal.open();
     }
 
-    static selectiveCheck(e) {
+    static selectiveCheck(e){
         const checked = document.querySelectorAll(".check:checked")
         const max = 5
 
         if (checked.length >= max +1){
             return false;
+        }
+    }
+
+    static selectiveSubmit(e){
+        const checked = document.querySelectorAll(".check:checked")
+        const min = 2
+
+        if (checked.length < min){
+            return false
         }
     }
 }
