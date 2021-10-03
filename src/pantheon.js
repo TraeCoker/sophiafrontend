@@ -4,6 +4,9 @@ class Pantheon {
         modal.main.innerHTML = `
         <h1>Create a new Pantheon</h1>
         <form id="pantheon-form">
+        <label for="name">Name your Pantheon:</label><br>
+        <input type="text" name="name"><br><br><br>
+        <label for="checkbox-grid">Choose 2-5 philosophers to learn from:</label>
         <p id="checkbox-grid"></p>
         </form>
         `
