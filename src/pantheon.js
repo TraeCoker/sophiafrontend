@@ -14,7 +14,7 @@ class Pantheon {
         const grid = document.getElementById("checkbox-grid")
         Philosopher.all.forEach((p) => {
             const label = document.createElement("label")
-            label.innerHTML = `<input type="checkbox" name="${p.name} value="${p.name}" class="check"><span>${p.name}</span>`
+            label.innerHTML = `<input type="checkbox" name="${p.name}" value="box-${p.id}" class="check"><span>${p.name}</span>`
             const span = label.firstElementChild.nextElementSibling
             const img = document.createElement("img")
             img.src = p.imageUrl
@@ -53,6 +53,12 @@ class Pantheon {
     }
 
     static handleSubmit(e){
+        e.preventDefault();
+        const philosopherIds = [] 
+        e.target.querySelectorAll(".check:checked").forEach(node => {
+            const id = node.value.split("-")[1];
+            philosopherIds.push(parseInt(id));
+        })
         debugger 
     }
 }
