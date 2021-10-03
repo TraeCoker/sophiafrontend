@@ -64,6 +64,7 @@ class Pantheon {
             name: e.target.name.value,
             philosopher_ids: philosopherIds
         }
-        debugger 
+        
+        pantheonServiceCall.createPantheon(newPantheon);
     }
 }
