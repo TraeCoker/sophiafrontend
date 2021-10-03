@@ -1,5 +1,35 @@
 class Pantheon {
+    static all = [];
 
+    constructor({name, id, philosophers}){
+        this.name = name 
+        this.id = id 
+        this.philosophers = philosophers
+        this.element = document.createElement('div');
+        this.element.dataset['id'] = id;
+        this.element.id = `pantheon-${this.id}`
+        this.element.innerHTML = `${this.name}`
+        Pantheon.all.push(this)
+    }
+
+    renderShowView(){
+        mainDiv.innerText = ""
+
+        const philoBtns = this.philosophers.map(function(p){
+            const btn = document.createElement("button");
+            btn.dataset['id'] = p.id
+            btn.id = `philo-btn-${p.id}`
+            btn.innerHTML = p.name 
+
+            btn.addEventListener('click', function(e){
+                Philosopher.renderShowView(e);
+            })
+            return btn
+        })
+
+        mainDiv.appendChild(this.element)
+        philoBtns.forEach(button => mainDiv.appendChild(button))
+    }
     static renderPantheonForm(){
         modal.main.innerHTML = `
         <h1>Create a new Pantheon</h1>

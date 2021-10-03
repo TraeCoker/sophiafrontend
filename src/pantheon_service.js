@@ -15,9 +15,11 @@ class PantheonService {
         }
 
         fetch(this.port + '/pantheons', configObject)
-        .then(response => response.json();)
+        .then(response => response.json())
         .then(data =>{
-            debugger
+            const p = new Pantheon(data);
+            p.renderShowView();
+            modal.close();
         })
     }
 }
