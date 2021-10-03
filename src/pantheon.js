@@ -14,12 +14,14 @@ class Pantheon {
         const grid = document.getElementById("checkbox-grid")
         Philosopher.all.forEach((p) => {
             const label = document.createElement("label")
-            label.innerHTML = `<input type="checkbox" name="${p.name} value="${p.name}"><span>${p.name}</span>`
+            label.innerHTML = `<input type="checkbox" name="${p.name} value="${p.name}" class="check"><span>${p.name}</span>`
             const span = label.firstElementChild.nextElementSibling
             const img = document.createElement("img")
             img.src = p.imageUrl
             img.className = "thumbnail"
             span.appendChild(img)
+
+            label.onclick = Pantheon.selectiveCheck;
             grid.appendChild(label)
         })
         const submit = document.createElement("input");
@@ -28,5 +30,14 @@ class Pantheon {
 
         form.appendChild(submit)
         modal.open();
+    }
+
+    static selectiveCheck(e) {
+        const checked = document.querySelectorAll(".check:checked")
+        const max = 5
+
+        if (checked.length >= max +1){
+            return false;
+        }
     }
 }
