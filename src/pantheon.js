@@ -13,6 +13,7 @@ class Pantheon {
     }
 
     renderShowView(){
+        homeDiv.innerHTML = ""
         mainDiv.innerText = ""
 
         const philoBtns = this.philosophers.map(function(p){
@@ -30,6 +31,32 @@ class Pantheon {
         mainDiv.appendChild(this.element)
         philoBtns.forEach(button => mainDiv.appendChild(button))
     }
+
+    renderCard(){
+        const card = document.createElement('div')
+        card.className = "card"
+        card.id = `pantheon-card-${this.id}`
+
+        card.innerHTML= `<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Empedocles_in_Thomas_Stanley_History_of_Philosophy.jpg" style="width:100%">`
+        const philosopherList = document.createElement('ul')
+
+        this.philosophers.forEach(p =>{
+            const li = document.createElement('li');
+            li.innerHTML = p.name; 
+            philosopherList.appendChild(li);
+        });
+
+        const info = document.createElement('div')
+        info.className = "container"
+        info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
+        info.appendChild(philosopherList);
+        card.appendChild(info)
+        card.addEventListener('click', this.renderShowView)
+        return card
+    }
+
+    
+
     static renderPantheonForm(){
         modal.main.innerHTML = `
         <h1>Create a new Pantheon</h1>

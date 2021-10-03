@@ -36,7 +36,7 @@ class School {
 
         const info = document.createElement('div')
         info.className = "container"
-        info.innerHTML = `<h2 class="school-name"><b>${this.name}</b></h2>`
+        info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
         info.appendChild(philosopherList);
         card.appendChild(info)
         card.addEventListener('click', this.renderShowView)
