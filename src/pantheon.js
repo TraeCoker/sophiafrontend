@@ -59,6 +59,11 @@ class Pantheon {
             const id = node.value.split("-")[1];
             philosopherIds.push(parseInt(id));
         })
+        
+        const newPantheon = {
+            name: e.target.name.value,
+            philosopher_ids: philosopherIds
+        }
         debugger 
     }
 }
