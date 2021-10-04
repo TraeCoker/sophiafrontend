@@ -29,8 +29,14 @@ class Pantheon {
             const philosopher = Philosopher.all.find(philo => philo.id === p.id)
             const card = philosopher.renderCard();
             const title = card.querySelector("h2")
-            title.addEventListener('click', function(e){
-                philosopher.renderShowView(e);
+            const img = card.querySelector("img")
+
+            title.addEventListener('click', function(){
+                philosopher.renderShowView();
+            })
+
+            img.addEventListener('click', function(){
+                philosopher.renderQuote();
             })
            return card
         })

@@ -59,4 +59,13 @@ class Philosopher {
         return card
     }
 
+    renderQuote(){
+        const random = Math.floor(Math.random() * this.quotes.length)
+        modal.main.innerText = ""
+        const quote = document.createElement("div")
+        quote.innerHTML = `<h3 class="quote">${this.name} says: "${this.quotes[random].passage}"</h3>`
+
+        modal.main.appendChild(quote)
+        modal.open();
+    }
 }
