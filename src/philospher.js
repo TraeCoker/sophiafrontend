@@ -45,4 +45,20 @@ class Philosopher {
         modal.open();
     }
 
+    renderCard(){
+        const card = document.createElement('div')
+        card.className = "philosopher-card"
+        card.id = `philosopher-card-${this.id}`
+
+        card.innerHTML= `<img src="${this.imageUrl}" style="width:100%">`
+       
+        const info = document.createElement('div')
+        info.className = "philosopher-container"
+        info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
+        //info.appendChild(philosopherList);
+        card.appendChild(info)
+        //card.addEventListener('click', this.renderShowView)
+        return card
+    }
+
 }

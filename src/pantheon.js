@@ -25,20 +25,18 @@ class Pantheon {
         homeDiv.innerHTML = ""
         mainDiv.innerText = ""
 
-        const philoBtns = pantheon.philosophers.map(function(p){
-            const btn = document.createElement("button");
-            btn.dataset['id'] = p.id
-            btn.id = `philo-btn-${p.id}`
-            btn.innerHTML = p.name 
-
-            btn.addEventListener('click', function(e){
-                Philosopher.renderShowView(e);
-            })
-            return btn
+        const philoCards = pantheon.philosophers.map(function(p){
+            const philosopher = Philosopher.all.find(philo => philo.id === p.id)
+            const card = philosopher.renderCard();
+            debugger 
+            //btn.addEventListener('click', function(e){
+             //   Philosopher.renderShowView(e);
+           // })
+           return card
         })
 
         mainDiv.appendChild(pantheon.element)
-        philoBtns.forEach(button => mainDiv.appendChild(button))
+        philoCards.forEach(card => mainDiv.appendChild(card))
     }
 
     renderCard(){
