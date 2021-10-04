@@ -80,6 +80,36 @@ body {
     border-radius: 5px 5px 0 0;
   }
 
+  /*philospher cards*/
+
+  .philosopher-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 10px;
+    background:rgb(255, 255, 255, 0.459);
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .philosopher-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .philosopher-container {
+    padding: 2px 16px;
+  }
+
+  .philosopher-card img {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+  }
+
   .philosopher-avatar {
     height: 250px;
     width: auto;
