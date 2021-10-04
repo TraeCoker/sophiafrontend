@@ -23,7 +23,7 @@ class PantheonService {
         })
     }
     
-    getSchools(){
+    getPantheons(){
         fetch(this.port + "/pantheons")
         .then(response => response.json())
         .then(json => {
