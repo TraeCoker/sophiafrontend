@@ -12,11 +12,20 @@ class Pantheon {
         Pantheon.all.push(this)
     }
 
-    renderShowView(){
+    renderShowView(e){
+       const query = [] 
+       if (arguments.length === 1){
+            query.push(Pantheon.all.find(function(p){return p.id === parseInt(e.target.parentElement.id.split('-')[2])}))
+        } else {
+            query.push(this)
+        }
+
+        const pantheon = query[0]
+
         homeDiv.innerHTML = ""
         mainDiv.innerText = ""
 
-        const philoBtns = this.philosophers.map(function(p){
+        const philoBtns = pantheon.philosophers.map(function(p){
             const btn = document.createElement("button");
             btn.dataset['id'] = p.id
             btn.id = `philo-btn-${p.id}`
@@ -28,7 +37,7 @@ class Pantheon {
             return btn
         })
 
-        mainDiv.appendChild(this.element)
+        mainDiv.appendChild(pantheon.element)
         philoBtns.forEach(button => mainDiv.appendChild(button))
     }
 
