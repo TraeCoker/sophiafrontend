@@ -28,12 +28,12 @@ class Pantheon {
         const philoCards = pantheon.philosophers.map(function(p){
             const philosopher = Philosopher.all.find(philo => philo.id === p.id)
             const card = philosopher.renderCard();
-            card.addEventListener('click', function(e){
+            const title = card.querySelector("h2")
+            title.addEventListener('click', function(e){
                 philosopher.renderShowView(e);
             })
            return card
         })
-
         mainDiv.appendChild(pantheon.element)
         philoCards.forEach(card => mainDiv.appendChild(card))
     }

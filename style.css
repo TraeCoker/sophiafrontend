@@ -101,6 +101,9 @@ body {
   }
   
 
+  .philosopher-card-name:hover {
+    color: gold;
+  }
  
   
   /* Add some padding inside the card container */

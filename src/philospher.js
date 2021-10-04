@@ -52,7 +52,7 @@ class Philosopher {
 
         const info = document.createElement('div')
         info.className = "philosopher-container"
-        info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
+        info.innerHTML = `<h2 class="philosopher-card-name"><b>${this.name}</b></h2>`
         
         card.appendChild(info)
         const philosopher = this 
