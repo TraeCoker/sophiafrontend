@@ -8,7 +8,7 @@ class Pantheon {
         this.element = document.createElement('div');
         this.element.dataset['id'] = id;
         this.element.id = `pantheon-${this.id}`
-        this.element.innerHTML = `${this.name}`
+        this.element.innerHTML = `<h1>${this.name}</h1>`
         Pantheon.all.push(this)
     }
 
