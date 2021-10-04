@@ -66,7 +66,8 @@ class School {
             btn.innerHTML = p.name 
 
             btn.addEventListener('click', function(e){
-                Philosopher.renderShowView(e);
+                const philosopher = Philosopher.all.find(function(p){return p.id === parseInt(e.target.dataset.id)})
+                philosopher.renderShowView();
             })
             return btn
         })

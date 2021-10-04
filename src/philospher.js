@@ -37,11 +37,11 @@ class Philosopher {
     }
     
 
-    static renderShowView(e){
+    renderShowView(e){
         modal.main.innerText = ""
-        const philosopher = this.all.find(function(p){return p.id === parseInt(e.target.dataset.id)})
+        //const philosopher = this.all.find(function(p){return p.id === parseInt(e.target.dataset.id)})
         
-        modal.main.appendChild(philosopher.element)
+        modal.main.appendChild(this.element)
         modal.open();
     }
 
@@ -49,15 +49,15 @@ class Philosopher {
         const card = document.createElement('div')
         card.className = "philosopher-card"
         card.id = `philosopher-card-${this.id}`
-
         card.innerHTML= `<img src="${this.imageUrl}" style="width:100%">`
-       
+
         const info = document.createElement('div')
         info.className = "philosopher-container"
         info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
+        
         //info.appendChild(philosopherList);
         card.appendChild(info)
-        //card.addEventListener('click', this.renderShowView)
+        card.addEventListener('click', Philosopher.renderShowView)
         return card
     }
 
