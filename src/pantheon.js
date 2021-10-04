@@ -28,10 +28,9 @@ class Pantheon {
         const philoCards = pantheon.philosophers.map(function(p){
             const philosopher = Philosopher.all.find(philo => philo.id === p.id)
             const card = philosopher.renderCard();
-            debugger 
-            //btn.addEventListener('click', function(e){
-             //   Philosopher.renderShowView(e);
-           // })
+            card.addEventListener('click', function(e){
+                philosopher.renderShowView(e);
+            })
            return card
         })
 

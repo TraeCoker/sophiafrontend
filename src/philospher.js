@@ -37,9 +37,8 @@ class Philosopher {
     }
     
 
-    renderShowView(e){
+    renderShowView(){
         modal.main.innerText = ""
-        //const philosopher = this.all.find(function(p){return p.id === parseInt(e.target.dataset.id)})
         
         modal.main.appendChild(this.element)
         modal.open();
@@ -55,9 +54,8 @@ class Philosopher {
         info.className = "philosopher-container"
         info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
         
-        //info.appendChild(philosopherList);
         card.appendChild(info)
-        card.addEventListener('click', Philosopher.renderShowView)
+        const philosopher = this 
         return card
     }
 
