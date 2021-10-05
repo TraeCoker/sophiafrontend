@@ -40,8 +40,14 @@ class Pantheon {
             })
            return card
         })
+
+        const inquireButton = document.createElement("button")
+        inquireButton.innerHTML = "Inquiry"
+        inquireButton.className - "inquire-button"
+
         mainDiv.appendChild(pantheon.element)
         philoCards.forEach(card => mainDiv.appendChild(card))
+        mainDiv.appendChild(inquireButton)
     }
 
     renderCard(){
