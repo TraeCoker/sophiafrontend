@@ -1,7 +1,7 @@
 class Inquiry {
     static all = [];
 
-    constructor({id, question]){
+    constructor({id, question}) {
         this.id = id 
         this.question = question
         this.element = document.createElement('div');
