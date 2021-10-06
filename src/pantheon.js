@@ -49,7 +49,12 @@ class Pantheon {
         const inquireButton = document.createElement("button")
         inquireButton.innerHTML = "Inquiry"
         inquireButton.className - "inquire-button"
-
+        inquireButton.id = `btn-${pantheon.id}`
+        inquireButton.addEventListener('click', function(){
+            const pantheon = Pantheon.all.find(p => p.id === parseInt(this.id.split("-")[1]))
+            pantheon.renderInquiry();
+        })
+        
         mainDiv.appendChild(pantheon.element)
         philoCards.forEach(card => mainDiv.appendChild(card))
         mainDiv.appendChild(inquireButton)
