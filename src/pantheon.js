@@ -12,6 +12,11 @@ class Pantheon {
         Pantheon.all.push(this)
     }
 
+    generateInquiry(){
+        const random = Math.floor(Math.random() * Inquiry.all.length)
+        this.inquiry = Inquiry.all[random]
+    }
+
     renderShowView(e){
        const query = [] 
        if (arguments.length === 1){

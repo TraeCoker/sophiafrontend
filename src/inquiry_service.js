@@ -10,7 +10,6 @@ class InquiryService {
         .then(json => {
             json.forEach(element=>{
                 const i = new Inquiry(element)
-                console.log(i)
             })
         })
     }

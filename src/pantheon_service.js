@@ -18,6 +18,8 @@ class PantheonService {
         .then(response => response.json())
         .then(data =>{
             const p = new Pantheon(data);
+
+            p.generateInquiry();
             p.renderShowView();
             modal.close();
         })
@@ -29,6 +31,7 @@ class PantheonService {
         .then(json => {
             json.forEach(element=>{
                 const p = new Pantheon(element)
+                p.generateInquiry();
             })
         })
     }
