@@ -78,6 +78,32 @@ class Pantheon {
         return card
     }
 
+    renderInquiry(){
+        modal.main.innerHTML = ""
+
+        const instruction = document.createElement('div')
+        instruction.className = "instruction"
+        instruction.innerHTML = `
+        <h1>Inquiry Exercise</h1>
+        <p>The following instructions are designed to guide one into an optimal state for contemplation. Dialogos, the practice of meditative inquiry is a means of coming into a deep relationship with truth and meaning rather than an intellectual exercise.
+ 
+        Take a moment to get comfortable in an upright posture.
+        With your eyes closed, breathe in deeply and slowly. As you exhale slowly and fully relax any tension you feel in your body.
+        Continue to listen to the sensations of your body, non-judging, merely observing. Follow the sensations of your breath as it moves in and out naturally.
+        Spend a few minutes with the breath and the body in this way, relaxed but aware and observing.
+        Once you feel settled into your body, present this question to your mind by saying to yourself inwardly:
+        <h3>${this.inquiry.question}</h3>
+        Let the words resound within you and be curious.Do not rush to immediatly answering. Rather listen inwardly and let the question reveal itself to you on a deeper level.
+        Relate to the question as thought the question were a teacher with much to teach you, you only need to listen. 
+        Spend 5 - 15 minutes meditating with the question in this way. Should you find your mind wandering, gently repeat the question again to yourself.
+        After the time is up gently come back to your body and open your eyes.
+        Spend another 5 - 15 minutes journaling about your experiences and what arises in response to this question.
+        </p>`
+
+        modal.main.appendChild(instruction)
+        modal.open();
+    }
+
     static attachToDom(){
         mainDiv.innerText = ""
         this.all.forEach(pantheon => mainDiv.appendChild(pantheon.renderCard()));
