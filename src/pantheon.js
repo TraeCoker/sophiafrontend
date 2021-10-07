@@ -26,7 +26,8 @@ class Pantheon {
         }
 
         const pantheon = query[0]
-        homeDiv.innerHTML = ""
+        homeDiv.style.display = "none"
+        navBar.style.display = "block"
         mainDiv.innerText = ""
 
         const philoCards = pantheon.philosophers.map(function(p){
