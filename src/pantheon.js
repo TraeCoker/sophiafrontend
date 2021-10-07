@@ -26,7 +26,6 @@ class Pantheon {
         }
 
         const pantheon = query[0]
-
         homeDiv.innerHTML = ""
         mainDiv.innerText = ""
 
@@ -67,6 +66,7 @@ class Pantheon {
 
         card.innerHTML= `<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Empedocles_in_Thomas_Stanley_History_of_Philosophy.jpg" style="width:100%">`
         const philosopherList = document.createElement('ul')
+        philosopherList.id = `philosopher-list-${this.id}`
 
         this.philosophers.forEach(p =>{
             const li = document.createElement('li');
@@ -76,7 +76,7 @@ class Pantheon {
 
         const info = document.createElement('div')
         info.className = "container"
-        info.innerHTML = `<h2 class="card-name"><b>${this.name}</b></h2>`
+        info.innerHTML = `<h2 class="card-name" id="card-name-${this.id}"><b>${this.name}</b></h2>`
         info.appendChild(philosopherList);
         card.appendChild(info)
         card.addEventListener('click', this.renderShowView)
