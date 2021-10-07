@@ -11,6 +11,15 @@ body {
     color: rgb(255, 255, 255);
   }
 
+ #home-image {
+    height: 300px;
+    width: auto;
+ } 
+
+.home-nav:hover {
+  cursor: pointer;
+}
+
   .row {
     display: flex;
   }
