@@ -11,6 +11,10 @@ body {
     color: rgb(255, 255, 255);
   }
 
+  #nav-banner:hover{
+    cursor: pointer;
+  }
+
  #home-image {
     height: 300px;
     width: auto;
