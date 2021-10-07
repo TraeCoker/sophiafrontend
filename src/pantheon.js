@@ -30,6 +30,13 @@ class Pantheon {
         navBar.style.display = "block"
         mainDiv.innerText = ""
 
+        const backBtn = document.createElement('button')
+
+        backBtn.innerHTML = "Back"
+        backBtn.addEventListener('click', function(){
+            Pantheon.attachToDom();
+        });
+
         const philoCards = pantheon.philosophers.map(function(p){
             const philosopher = Philosopher.all.find(philo => philo.id === p.id)
             const card = philosopher.renderCard();
@@ -55,7 +62,7 @@ class Pantheon {
             pantheon.renderInquiry();
         })
 
-        mainDiv.appendChild(pantheon.element)
+        mainDiv.append(pantheon.element, backBtn)
         philoCards.forEach(card => mainDiv.appendChild(card))
         mainDiv.appendChild(inquireButton)
     }
@@ -77,6 +84,7 @@ class Pantheon {
 
         const info = document.createElement('div')
         info.className = "container"
+        info.id = `containter-div-${this.id}`
         info.innerHTML = `<h2 class="card-name" id="card-name-${this.id}"><b>${this.name}</b></h2>`
         info.appendChild(philosopherList);
         card.appendChild(info)
