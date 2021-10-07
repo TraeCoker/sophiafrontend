@@ -11,12 +11,6 @@ body {
     color: rgb(255, 255, 255);
   }
 
-  .home-nav {
-    width: 350px;
-    height: 250px;
-    border-radius: 5px 5px 0 0;
-  }
-
   .row {
     display: flex;
   }
@@ -25,6 +19,7 @@ body {
     flex: 33.33%;
     padding: 5px;
   }
+
   .form-error {
 
     border: 2px solid #e74c3c;
