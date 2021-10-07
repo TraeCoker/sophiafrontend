@@ -178,6 +178,10 @@ class Pantheon {
 
     static handleSubmit(e){
         e.preventDefault();
+        if (e.target.name.value === ""){
+            return false
+        }
+        
         const philosopherIds = [] 
         e.target.querySelectorAll(".check:checked").forEach(node => {
             const id = node.value.split("-")[1];
