@@ -14,12 +14,12 @@ pantheonServiceCall.getPantheons();
 
 
 homeDiv.addEventListener('click', function(e){
-    if(e.target.id === "schl_btn"){
+    if(e.target.id === "schl_img"){
         homeDiv.innerHTML = ""
         School.attachToDom();
-    } else if(e.target.id === "pthn_btn"){
+    } else if(e.target.id === "pthn_img"){
         homeDiv.innerHTML = ""
         Pantheon.attachToDom();
-    } else if (e.target.id === "new_pthn_btn"){
+    } else if (e.target.id === "new_pthn_img"){
         Pantheon.renderPantheonForm();
     }})
