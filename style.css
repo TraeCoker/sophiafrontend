@@ -12,6 +12,11 @@ body {
     color: rgb(255, 255, 255);
   }
 
+  .form-error {
+
+    border: 2px solid #e74c3c;
+  }
+
   /* https://www.w3schools.com/howto/howto_css_modals.asp */
 .modal {
     display: none; /* Hidden by default */

@@ -17,12 +17,19 @@ class PantheonService {
         fetch(this.port + '/pantheons', configObject)
         .then(response => response.json())
         .then(data =>{
+
+            if (data.error){
+            const form = document.querySelector("form")
+            form.firstElementChild.innerHTML = "Name Unavailable"
+            form.name.className = "form-error";
+            } else {
             const p = new Pantheon(data);
 
             p.generateInquiry();
             p.renderShowView();
-            modal.close();
+            modal.close();}
         })
+        .catch()
     }
     
     getPantheons(){
