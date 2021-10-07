@@ -54,7 +54,7 @@ class Pantheon {
             const pantheon = Pantheon.all.find(p => p.id === parseInt(this.id.split("-")[1]))
             pantheon.renderInquiry();
         })
-        
+
         mainDiv.appendChild(pantheon.element)
         philoCards.forEach(card => mainDiv.appendChild(card))
         mainDiv.appendChild(inquireButton)
@@ -105,7 +105,16 @@ class Pantheon {
         Spend another 5 - 15 minutes journaling about your experiences and what arises in response to this question.
         </p>`
 
-        modal.main.appendChild(instruction)
+        const completeButton = document.createElement('button')
+        completeButton.innerHTML = "Complete Inquiry"
+        completeButton.className = "complete-button"
+        completeButton.id = `complete-${this.id}`
+        completeButton.addEventListener('click', function(){
+            modal.close();
+            const pantheon = Pantheon.all.find(p => p.id === parseInt(this.id.split("-")[1]))
+            pantheon.generateInquiry();
+        })
+        modal.main.append(instruction, completeButton);
         modal.open();
     }
 
