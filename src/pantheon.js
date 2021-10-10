@@ -31,7 +31,7 @@ class Pantheon {
         mainDiv.innerText = ""
 
         const backBtn = document.createElement('button')
-
+        backBtn.className = "btn back"
         backBtn.innerHTML = "Back"
         backBtn.addEventListener('click', function(){
             Pantheon.attachToDom();
@@ -55,7 +55,7 @@ class Pantheon {
 
         const inquireButton = document.createElement("button")
         inquireButton.innerHTML = "Inquiry"
-        inquireButton.className - "inquire-button"
+        inquireButton.className = "btn"
         inquireButton.id = `btn-${pantheon.id}`
         inquireButton.addEventListener('click', function(){
             const pantheon = Pantheon.all.find(p => p.id === parseInt(this.id.split("-")[1]))
@@ -159,6 +159,7 @@ class Pantheon {
         })
         const submit = document.createElement("input");
         submit.type = "submit" 
+        submit.className = "btn"
         submit.value = "Create Pantheon"
         submit.onclick = Pantheon.selectiveSubmit;
         form.appendChild(submit)
