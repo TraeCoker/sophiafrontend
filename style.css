@@ -87,7 +87,7 @@ body {
     display: inline-block;
     border-radius: 5px;
     margin: 10px;
-    background:rgb(255, 255, 255, 0.459);
+    background:rgba(251, 157, 34, 0.726);
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -117,7 +117,7 @@ body {
     display: inline-block;
     border-radius: 5px;
     margin: 10px;
-    background:rgb(255, 255, 255, 0.459);
+    background:rgba(255, 255, 255, 0.459);
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -128,7 +128,7 @@ body {
   
 
   .philosopher-card-name:hover {
-    color: gold;
+    color: rgb(255, 196, 0);
   }
  
   
@@ -170,7 +170,7 @@ body {
   }
   
   #checkbox-grid input[type="checkbox"]:checked + span {
-    background-color: gold;
+    background-color: rgb(255, 196, 0);
     color: rgb(107, 201, 255);
   }
 
@@ -192,5 +192,6 @@ body {
     cursor: pointer;
   }
 
-  .back{
+  #main{
+    
   }
