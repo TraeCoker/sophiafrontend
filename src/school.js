@@ -20,7 +20,7 @@ class School {
         this.element.innerHTML = `
         <h1 class="school-name-show">${this.name}</h1></h1>
         <h4>${this.span}</h4>
-        <h3>${this.focus}</h3>
+        <h3><b>Focus:</b> <i>${this.focus}</i></h3>
         <p class="description">${this.description}</p>
         `
     }
@@ -44,7 +44,7 @@ class School {
         info.innerHTML = `
         <h2 class="card-name"><b>${this.name}</b></h2>
         <h4>${this.span}</h4>
-        <h4>${this.focus}</h4>`
+        <h4><b>Focus:</b> <i>${this.focus}</i></h4>`
         info.appendChild(philosopherList);
         card.appendChild(info)
         card.addEventListener('click', this.renderShowView)
