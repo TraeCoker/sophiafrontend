@@ -30,7 +30,7 @@ class School {
         card.className = "card"
         card.id = `school-card-${this.id}`
 
-        card.innerHTML= `<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Empedocles_in_Thomas_Stanley_History_of_Philosophy.jpg" style="width:100%">`
+        card.innerHTML= `<img src=${this.imageURL}" style="width:100%">`
         const philosopherList = document.createElement('ul')
 
         this.philosophers.forEach(p =>{
