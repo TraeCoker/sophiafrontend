@@ -1,12 +1,13 @@
 class School {
     static all = [];
 
-    constructor({name, id, description, focus, philosophers, image_url}){
+    constructor({name, id, description, focus, philosophers, image_url, span}){
         this.name = name 
         this.id = id 
         this.description = description 
         this.focus = focus 
         this.imageURL = image_url
+        this.span = span
         this.philosophers = philosophers
         this.element = document.createElement('div');
         this.element.dataset['id'] = id;
@@ -18,6 +19,8 @@ class School {
     render(){
         this.element.innerHTML = `
         <h1 class="school-name-show">${this.name}</h1></h1>
+        <h4>${this.span}</h4>
+        <h3>${this.focus}</h3>
         <p class="description">${this.description}</p>
         `
     }
@@ -40,6 +43,7 @@ class School {
         info.className = "container"
         info.innerHTML = `
         <h2 class="card-name"><b>${this.name}</b></h2>
+        <h4>${this.span}</h4>
         <h4>${this.focus}</h4>`
         info.appendChild(philosopherList);
         card.appendChild(info)
