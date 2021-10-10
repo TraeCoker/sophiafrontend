@@ -192,6 +192,6 @@ body {
     cursor: pointer;
   }
 
-  #main{
-    
+  ul {
+    list-style-type: circle;
   }
