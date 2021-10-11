@@ -25,7 +25,9 @@ class Philosopher {
         <p class="bio">${this.bio}</p>
         `
 
+        if(this.works.length > 0) {
         const worksList = document.createElement('ul')
+        worksList.innerHTML = `<h1>Works by ${this.name}:</h1>`
 
         this.works.forEach(w =>{
             const li = document.createElement('li');
@@ -33,7 +35,7 @@ class Philosopher {
             worksList.appendChild(li);
         });
 
-        this.element.appendChild(worksList)
+        this.element.appendChild(worksList)}
     }
     
 
