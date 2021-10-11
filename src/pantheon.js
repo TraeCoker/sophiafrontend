@@ -62,7 +62,7 @@ class Pantheon {
             pantheon.renderInquiry();
         })
 
-        mainDiv.append(pantheon.element, backBtn)
+        mainDiv.append(backBtn, pantheon.element)
         philoCards.forEach(card => mainDiv.appendChild(card))
         mainDiv.appendChild(inquireButton)
     }
