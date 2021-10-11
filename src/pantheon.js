@@ -8,7 +8,9 @@ class Pantheon {
         this.element = document.createElement('div');
         this.element.dataset['id'] = id;
         this.element.id = `pantheon-${this.id}`
-        this.element.innerHTML = `<h1>${this.name}</h1>`
+        this.element.innerHTML = `
+        <h1>${this.name}</h1>
+        <p>Click on a philosopher's image to council them or click 'Inquiry' to recieve a philosophical exercise.</p>`
         Pantheon.all.push(this)
     }
 
@@ -75,7 +77,7 @@ class Pantheon {
         card.className = "card"
         card.id = `pantheon-card-${this.id}`
 
-        card.innerHTML= `<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Empedocles_in_Thomas_Stanley_History_of_Philosophy.jpg" style="width:100%">`
+        card.innerHTML= `<img src="https://mymodernmet.com/wp/wp-content/uploads/2018/08/school-of-athens-raphael-detail-1.jpg" style="width:100%">`
         const philosopherList = document.createElement('ul')
         philosopherList.id = `philosopher-list-${this.id}`
 
