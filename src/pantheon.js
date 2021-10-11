@@ -53,6 +53,9 @@ class Pantheon {
            return card
         })
 
+        const inquiryDiv = document.createElement("div")
+        inquiryDiv.className = "inq"
+
         const inquireButton = document.createElement("button")
         inquireButton.innerHTML = "Inquiry"
         inquireButton.className = "btn"
@@ -61,10 +64,10 @@ class Pantheon {
             const pantheon = Pantheon.all.find(p => p.id === parseInt(this.id.split("-")[1]))
             pantheon.renderInquiry();
         })
-
-        mainDiv.append(backBtn, pantheon.element)
+        
+        inquiryDiv.appendChild(inquireButton)
+        mainDiv.append(backBtn, pantheon.element, inquiryDiv)
         philoCards.forEach(card => mainDiv.appendChild(card))
-        mainDiv.appendChild(inquireButton)
     }
 
     renderCard(){
