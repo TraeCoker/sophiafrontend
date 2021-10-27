@@ -53,7 +53,25 @@ class School {
 
     static attachToDom(){
         mainDiv.innerText = ""
+        const search = document.createElement("form")
+        search.innerHTML = `
+        <input type="text" name="search" />
+        <input type="submit" value="Search" />
+        `
+        search.addEventListener("submit", this.handleSearch)
+
+        mainDiv.appendChild(search);
+
         this.all.forEach(school => mainDiv.appendChild(school.renderCard()));
+    }
+ 
+    static handleSearch = (e) => {
+        e.preventDefault();
+        const search = e.target.search.value;
+
+        const result = this.all.filter(school => school.name.includes(search))
+        mainDiv.innerText = ""
+        result.forEach(school => mainDiv.appendChild(school.renderCard()));
     }
 
     renderShowView(e){

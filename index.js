@@ -7,6 +7,9 @@ const homeDiv = document.getElementById("home");
 const mainDiv = document.getElementById("main");
 const modal = new Modal();
 const navBar = document.getElementById("nav")
+if (true) {
+    let number = 42
+}
 
 philosopherServiceCall.getPhilosophers();
 schoolServiceCall.getSchools();
